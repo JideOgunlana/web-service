@@ -1,0 +1,19 @@
+# compiled output
+/dist
+
+# dependencies
+/node_modules
+
+
+# system files
+.DS_Store
+Thumbs.db
+subject
+
+# IDE - VSCode
+.vscode/*
+
+
+# files
+.env
+tests
