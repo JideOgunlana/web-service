@@ -22,7 +22,7 @@ export function validateLogLevelRequest(
             errorType.toLocaleLowerCase() !== 'info'
         )
             throw new Error;
-        if (!errorName.trim() && !errorDescription.trim()) {
+        if (!errorName.trim() || !errorDescription.trim()) {
             throw new Error;
         }
     } catch(err: any) {
