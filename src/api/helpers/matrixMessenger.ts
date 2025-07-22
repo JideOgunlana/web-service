@@ -3,7 +3,7 @@ import { MATRIX_ACCESS_TOKEN, MATRIX_SERVER, MATRIX_ROOM_ID } from "./CONSTANTS"
 
 
 export function buildSendUrl(req: Request): string {
-  return `${MATRIX_SERVER}/_matrix/client/v3/rooms/${encodeURIComponent(MATRIX_ROOM_ID)}/send/m.room.message/`;
+  return `${MATRIX_SERVER}/_matrix/client/v3/rooms/${encodeURIComponent(MATRIX_ROOM_ID)}/send/m.room.message/${req.timestamp}`;
 }
 
 export async function sendHttpRequest(sendUrl: string, messageBody: string): Promise<Response> {
